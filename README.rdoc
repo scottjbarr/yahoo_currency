@@ -1,0 +1,61 @@
+=== YahooCurrency
+
+Get the exchange rate for a set of currency codes.
+
+==== The Yahoo! Finance Service
+
+URL to fetch the AUD to USD exchange rate
+
+    http://download.finance.yahoo.com/d/quotes.csv?s=AUDUSD=X&f=nl1d1t1
+
+Although the Yahoo! service supports multiple rates values from one request, 
+this class does not yet support this functionality yet.
+
+  $ curl "http://download.finance.yahoo.com/d/quotes.csv?s=USDCAD=X+JPYUSD=X+GBPUSD=X+USDJPY=X+EURUSD=X&f=nl1d1t1"
+  "USD to CAD",1.0191,"6/18/2008","2:45am"
+  "JPY to USD",0.0093,"6/18/2008","2:45am"
+  "GBP to USD",1.9514,"6/18/2008","2:44am"
+  "USD to JPY",108.085,"6/18/2008","2:45am"
+  "EUR to USD",1.5493,"6/18/2008","2:44am"
+  
+==== Features
+
+* So easy to use, even a baby could find out what his currency is trading at.
+
+==== Example
+
+  exchange_rate = YahooCurrency.get_rate!("JPY", "USD")
+  exchange_rate.from #=> "JPY"
+  exchange_rate.to #=> "USD"
+  exchange_rate.rate #=> 0.0111
+  exchange_rate.timestamp #=> Wed Feb 11 22:20:00 +0800 2009
+
+==== References
+
+* http://gummy-stuff.org/forex.htm
+* http://www.thinkruby.org/tags/currency-converter
+* http://finance.yahoo.com/currency 
+* http://gummy-stuff.org/Yahoo-data.htm - tag info (the f parameter)
+
+==== License
+
+Copyright (c) 2009 Global IT Creations Pte. Ltd. http://www.globalitcreations.com/
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+

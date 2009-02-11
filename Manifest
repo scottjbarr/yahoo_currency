@@ -1,0 +1,15 @@
+config.yml
+init.rb
+lib/yahoo_currency/exchange_rate.rb
+lib/yahoo_currency/yahoo_currency.rb
+lib/yahoo_currency.rb
+Manifest
+Rakefile
+README.rdoc
+test/docs/FAKE-FAKE.csv
+test/docs/JPY-USD.csv
+test/docs/USD-CAD.csv
+test/integration/yahoo_currency_test.rb
+test/mocks/yahoo_currency_mock.rb
+test/test_helper.rb
+test/unit/yahoo_currency_test.rb
