@@ -35,7 +35,7 @@ this class does not yet support this functionality yet.
 * http://gummy-stuff.org/forex.htm
 * http://www.thinkruby.org/tags/currency-converter
 * http://finance.yahoo.com/currency 
-* http://gummy-stuff.org/Yahoo-data.htm - tag info (the f parameter)
+* http://gummy-stuff.org/Yahoo-data.htm
 
 ==== MIT License
 
