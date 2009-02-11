@@ -37,9 +37,9 @@ this class does not yet support this functionality yet.
 * http://finance.yahoo.com/currency 
 * http://gummy-stuff.org/Yahoo-data.htm - tag info (the f parameter)
 
-==== License
+==== MIT License
 
-Copyright (c) 2009 Global IT Creations Pte. Ltd. http://www.globalitcreations.com/
+Copyright (c) 2009 Global IT Creations Pte. Ltd. http://www.globalitcreations.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
