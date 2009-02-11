@@ -1,6 +1,6 @@
 === YahooCurrency
 
-Get the exchange rate for a set of currency codes.
+Retrieve currency exchange rates from Yahoo! Finance.
 
 ==== The Yahoo! Finance Service
 
