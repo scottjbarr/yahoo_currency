@@ -37,7 +37,9 @@ this class does not yet support this functionality yet.
 * http://finance.yahoo.com/currency 
 * http://gummy-stuff.org/Yahoo-data.htm
 
-==== MIT License
+==== License
+
+(The MIT License)
 
 Copyright (c) 2009 Global IT Creations Pte Ltd http://www.globalitcreations.com
 
