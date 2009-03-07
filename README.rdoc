@@ -1,8 +1,8 @@
-=== YahooCurrency
+= YahooCurrency
 
 Retrieve currency exchange rates from Yahoo! Finance.
 
-==== The Yahoo! Finance Service
+== The Yahoo! Finance Service
 
 URL to fetch the AUD to USD exchange rate
 
@@ -18,11 +18,12 @@ this class does not yet support this functionality yet.
   "USD to JPY",108.085,"6/18/2008","2:45am"
   "EUR to USD",1.5493,"6/18/2008","2:44am"
   
-==== Features
+== Features
 
 * So easy to use, even a baby could find out what his currency is trading at.
+* Tested with Ruby 1.8.7 and 1.9.1
 
-==== Example
+== Example
 
   exchange_rate = YahooCurrency.get_rate!("JPY", "USD")
   exchange_rate.from #=> "JPY"
@@ -30,14 +31,14 @@ this class does not yet support this functionality yet.
   exchange_rate.rate #=> 0.0111
   exchange_rate.timestamp #=> Wed Feb 11 22:20:00 +0800 2009
 
-==== References
+== References
 
 * http://gummy-stuff.org/forex.htm
 * http://www.thinkruby.org/tags/currency-converter
 * http://finance.yahoo.com/currency 
 * http://gummy-stuff.org/Yahoo-data.htm
 
-==== License
+== License
 
 (The MIT License)
 

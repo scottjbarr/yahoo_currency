@@ -17,7 +17,7 @@ class YahooCurrency
     target = "#{PATH}?s=#{from}#{to}=X&f=nl1d1t1"
 
     # hit the url
-    resp, data = http.get(target, nil)
+    resp, data = http.get(target)
 
     # check the response code
     if resp.code.to_i != 200
@@ -35,16 +35,23 @@ class YahooCurrency
   def self.parse_rate(data)
     data.split(',')[1].to_f
   end
-
+  
   #
   # The timestamp is in the 2 and 3rd fields of the CSV
   #
+  # The timestamp in the data from Yahoo will in the format 
+  # "M/D/YYYY HH:mm:ampm" Eg. 6/18/2008 2:45am
+  #
   def self.parse_timestamp(data)
-    # the timestamp will be in M/D/YYYY HH:mm:ampm format
-    ts = (data.split(',')[2] + ' ' + data.split(',')[3]).gsub('"', '').chop
-    return nil if ts == "N/A N/A"
-
-    Time.parse(ts)
+    data = data.gsub('"', '')
+    d = data.chop.split(',')[2]
+    t = data.split(',')[3].gsub('"', '')
+    
+    return nil if d == "N/A"
+    
+    dp = d.split("/")
+    
+    Time.parse("#{dp[2].to_i}/#{dp[0]}/#{dp[1].to_i} #{t}".chop)
   end
-
+  
 end

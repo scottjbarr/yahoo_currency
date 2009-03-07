@@ -4,7 +4,7 @@ require 'test/mocks/yahoo_currency_mock'
 class YahooCurrencyTest < Test::Unit::TestCase
   
   def setup
-    @timestamp = Time.parse("6/18/2008 2:45am")
+    @timestamp = Time.parse("2008-06-18 02:45:00 +0800")
   end
 
   def test_get_rate_jpy_usd
