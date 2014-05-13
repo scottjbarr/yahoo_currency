@@ -18,6 +18,8 @@ class YahooCurrency
 
     # hit the url
     resp, data = http.get(target)
+    # ruby >= 2.0 compatibility
+    data = resp.body if RUBY_VERSION > "1.9"
 
     # check the response code
     if resp.code.to_i != 200
@@ -35,23 +37,23 @@ class YahooCurrency
   def self.parse_rate(data)
     data.split(',')[1].to_f
   end
-  
+
   #
   # The timestamp is in the 2 and 3rd fields of the CSV
   #
-  # The timestamp in the data from Yahoo will in the format 
+  # The timestamp in the data from Yahoo will in the format
   # "M/D/YYYY HH:mm:ampm" Eg. 6/18/2008 2:45am
   #
   def self.parse_timestamp(data)
     data = data.gsub('"', '')
     d = data.chop.split(',')[2]
     t = data.split(',')[3].gsub('"', '')
-    
+
     return nil if d == "N/A"
-    
+
     dp = d.split("/")
-    
+
     Time.parse("#{dp[2].to_i}/#{dp[0]}/#{dp[1].to_i} #{t}".chop)
   end
-  
+
 end
